@@ -1,0 +1,1742 @@
+
+color_official_blue = #2D38DC
+color_offical_violet = #4952A2
+color_official_red = #E73136
+color_white = #ffffff
+
+/*
+display -webkit-flex
+display -moz-flex
+display -ms-flex
+display -o-flex
+display flex
+*/
+
+body
+  margin 0
+  padding 0
+  font-family 'Roboto', sans-serif
+
+
+.header-content
+  width 100%
+  height 70px
+  position absolute
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  z-index 10
+  transition all 1.1s ease-in-out
+  margin-top 0
+  background-color rgba(250,250,250,0.8)
+  .header-logo
+    width 60%
+    text-align center
+    img 
+      width 180px
+      height 43px
+      margin-top 12.5px
+  .header-menu-burger
+    width 40%
+
+.header-special
+  background-color rgba(0,0,0,0.15)
+
+.icon-menu--content
+  width 25px
+  height 18px
+  cursor pointer
+  outline none 
+  margin 26px 40px 0 auto
+  display block
+
+.icon-menu
+  display inline-block
+  margin-top 0
+  outline none
+  small
+    display block
+    border-radius 3em
+    width 25px
+    height 4px
+    margin 0 0 3px 0
+    background-color color_offical_violet
+    transition all 0.3s ease-in-out
+    &:nth-child(1), &:nth-child(3)
+      width 15px
+      margin-left 5px
+    &:nth-child(3)
+      margin-bottom 0
+  &:hover
+    outline none 
+
+.icon-menu--active
+  small
+    &:nth-child(1), &:nth-child(3)
+      transform rotate(45deg) translateY(5.7px)
+      width 25px
+      height 5px
+      background-color color_official_red
+    &:nth-child(2)
+      width 0
+      height 0
+    &:nth-child(3)
+      transform rotate(-45deg) translateY(-5.7px)
+
+.overlay-menu
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  background-color #ffffff
+  z-index 7
+  display none
+
+.menu-options
+  position absolute
+  width 100%
+  height auto
+  top 50%
+  margin-top -35.5%
+  margin-left 0.1px  
+  ul
+    padding 0
+    margin 0
+    text-align center
+    li
+      list-style none
+      height 45px
+      line-height 45px
+      transition all 0.8s ease-in-out
+      a
+        display block
+        width 100%
+        height 100%
+        text-decoration none
+        color #4952A2
+        font-size 25px
+        font-weight 500
+        text-transform uppercase
+        cursor pointer
+        font-family 'Do Hyeon', sans-serif
+        &:hover
+          transform scale(1.1)
+          color color_official_blue
+
+.active-overlay
+  display block
+  transition all 0.3s ease-in-out
+
+.overlay-submenu
+  display none
+  position fixed
+  height auto
+  width 70%
+  background-color rgba(250,250,250,1)
+  z-index 8
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  box-shadow 0 10px 9px 0 rgba(0,0,0,0.12)
+  border 1px solid rgba(0,0,0,0.1)
+  &--header
+      width 85%
+      height 55px
+      border-bottom 1px solid rgba(0,0,0,0.1)
+      margin 0 auto
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      .back
+        width 40px
+        height 40px
+        line-height 45px
+        border-radius 50%
+        overflow hidden
+        text-align center
+        background-color #E0E0E0
+        margin 7.5px 0 0 0
+        a
+          display block
+          width 100%
+          height 100% 
+          color color_offical_violet
+          &:visited
+            color color_offical_violet
+      .title
+        padding-left 20px
+        font-family 'Do Hyeon', sans-serif
+        h3
+          color color_offical_violet
+          text-transform uppercase
+          margin 0
+          line-height 55px  
+    &--body
+      width 85%
+      margin 0 auto
+      ul
+        padding 0
+        li
+          list-style none
+          margin 7px 0
+          a
+            text-decoration none
+            color #263238
+            font-size 18px
+            &:hover
+              color color_offical_violet
+  
+.slider-main
+  position relative
+  width 100%
+  height 100vh
+  overflow hidden
+  background-position center
+  background-size cover
+
+.slider-layout--color
+  position absolute
+  width 100%
+  height 100%
+  background linear-gradient(-180deg, rgba(22,35,217,0.10) 2%, rgba(167,76,74,0.50) 65%, rgba(221,45,42,0.50) 100%)
+  z-index 2
+
+.slider-leyend
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  width 80%
+  height auto
+  z-index 3
+  text-align center
+  h1
+    font-size 28px
+    line-height 32px
+    color color_white
+    text-transform uppercase
+    font-family 'Baloo Da', cursive
+    text-shadow 0 0 2px color_offical_violet
+    
+
+.slider-oc
+  background-image url('../img/slide/ingenieria-civil.jpeg')
+
+.slider-mi
+  background-image url('../img/slide/instrumentacion-industrial.jpg')
+
+.slider-ie
+  background-image url('../img/slide/ingenieria-electrica.jpg')
+
+.slider-im
+  background-image url('../img/slide/ingenieria-mecanica.jpeg')  
+
+.slider-at
+  background-image url('../img/slide/aislamiento-termico.jpg')
+
+.slick-slider
+  margin-bottom 0
+
+.button-bottom, .button-top
+  position fixed
+  right 20px
+  bottom 5%
+  width 50px
+  height 50px
+  border-radius 50%
+  overflow hidden
+  text-align center
+  line-height 60px
+  background-color #17D0D9
+  box-shadow 0 9px 4px 0 rgba(0,0,0,0.5)
+  cursor pointer
+  outline none
+  a
+    text-decoration none
+    font-size 25px
+    color color_white 
+
+.button-top
+  background-color #176fd9
+  z-index 7
+
+.we
+  width 100%
+  height auto
+  background-color #1A273A
+  padding-bottom 80px
+  &-content
+    position relative
+    width 100%
+    height 100%
+
+.we-header
+  position absolute
+  top -40px
+  left 0
+  width 75%
+  height 80px
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  &--box
+    width 33.3%
+    height 80%
+    line-height 40px
+    padding 10px 0
+    text-align center
+    transition all 0.3s ease-in-out
+    cursor pointer
+    &:nth-child(1)
+      background-color #4952A2
+    &:nth-child(2)
+      background-color #5A64C5
+    &:nth-child(3)
+      background-color #6F7BE8
+ 
+.we-header--box
+  .we-header--icon
+    width 35px
+    height 35px
+    margin 0 auto
+    border-radius 50%
+    border 1.3px solid color_white
+    color color_white
+  .we-header--text
+    text-align center
+    h3
+      margin 0px 0 0 0  
+      font-size 11.5px
+      text-transform uppercase
+      color color_white
+
+.we-header--active
+  padding-bottom 20px
+  box-shadow 0 9px 4px 0 rgba(0,0,0,0.5)
+
+.we-text
+  width 80%
+  padding-top 100px
+  height auto
+  margin 0 auto
+  &--content
+    display none
+    h2
+      text-transform uppercase
+      padding-left 10px
+      color color_white
+      border-left 4px solid #4952A2
+      position relative
+      font-size 20px
+      margin-bottom 30px
+    #mission-text, #vission-text, #strategy-text
+      &::before
+        content 'HISTORIA'
+        position absolute
+        top 50%
+        left 20%
+        transform translate(0, -50%)
+        color rgba(110,110,110,0.15)
+        font-size 33px
+    #vission-text
+      &::before
+        content 'VISIÓN'
+    #strategy-text
+      &::before
+        content 'ESTRATEGIA'    
+    p
+      color #86A0C7
+      font-size 16px
+      span 
+        font-weight 700
+        color #bac9df
+
+.we-text--active
+  display block
+
+.quality
+  width 100%
+  padding 90px 0 80px 0
+  height auto
+  background-size cover
+  background-position  center
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                   rgba(206, 207, 211, 0.75) 100%), 
+                   url('../img/Business-policy.jpeg')
+  position relative
+
+.quality-header
+  position absolute
+  top -40px
+  left 0
+  width 80%
+  padding-left 20px
+  height 80px
+  background-color color_official_red
+  box-shadow 0 5px 4px 0 rgba(0,0,0,0.5)
+  h2, h4
+    margin 0
+    text-transform uppercase
+  h2
+    color color_white
+    font-size 21px
+  h4
+    color rgba(255, 255, 255, 0.48)
+    font-size 13px
+    margin-top 16px
+
+.quality-tabs
+  width 80%
+  height auto
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  justify-content justify
+  margin 0 auto 30px auto
+  div
+    width 28%
+    height 35px
+    line-height 35px
+    margin 0
+    text-align center
+    overflow hidden
+    background-color #d0d3f7
+    color color_offical_violet
+    text-transform uppercase
+    font-size 13px
+    cursor pointer
+    transition all 0.2s ease-in-out
+    -webkit-transform skew(-5deg)
+    -moz-transform skew(-5deg)
+    -ms-transform skew(-5deg)
+    -o-transform skew(-5deg)
+    transform skew(-5deg)
+    &:nth-child(2), &:nth-child(3)
+      border-left 1px solid rgba(255,255,255,0.4)  
+  .tab-active
+    background-color color_offical_violet
+    color color_white 
+
+.quality-content
+  width 80%
+  height auto
+  margin 0 auto
+  &--definition
+    display none
+  .def-active
+    display block  
+  &--description
+    h1
+      text-transform uppercase
+      font-size 20px
+      color #121212
+    p
+      color #171717
+      font-size 16px
+    .button-quality
+      width 180px
+      height 40px
+      line-height 42px
+      margin 20px 0 0 0
+      text-align center
+      background-color color_offical_violet 
+      border-radius 7px
+      box-shadow 0 5px 6px 0 rgba(0,0,0,0.5)
+      a
+        text-decoration none
+        display block
+        width 100%
+        height 100%
+        text-transform uppercase
+        color color_white
+        font-size 14px
+        font-weight 500
+  &--logo
+    margin 60px 0 0 0
+    .content-logo--box
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex 
+      justify-content center
+      img
+        width 45%
+        padding 0 10px
+        height 55px
+        &:nth-child(1)
+          height 45px
+          padding-right 12px
+        &:nth-child(2)
+          margin-top -5px  
+          border-left 1px solid color_offical_violet
+
+.overlay-quality
+  display none
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  background-color #ffffff
+  z-index 11
+  overflow-y auto
+  &--content
+    position relative
+    top 10%
+    width 80%
+    height auto
+    left 50%
+    transform translate(-50%, 0)
+    margin-bottom 10%
+
+.quality-content--header
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  justify-content space-between
+  .logo
+    width 70%
+    img
+      width 180px
+      height 45px
+  .button
+    width 30%  
+    text-align -webkit-right
+    &-close
+      width 70px
+      height 33px
+      line-height 33px
+      margin-top 7px
+      background-color #DA5555
+      text-align center
+      border-radius 3px
+      overflow hidden
+      a
+        display block
+        width 100%
+        height 100%
+        text-decoration none
+        color color_white
+        text-transform uppercase
+        font-size 13px
+
+.quality-content--body
+  margin-top 40px
+  h2
+    text-transform uppercase
+    font-size 20px
+    color #121212
+  p
+    color #171717
+    font-size 16px
+  ul
+    padding 0
+    margin 0
+    li
+      list-style none
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content center
+      margin 5px 0
+      span
+        &:nth-child(1)
+          width 10%
+          color color_offical_violet
+        &:nth-child(2)
+          width 90%  
+
+.services
+  width 100%
+  height auto
+  padding 100px 0 80px 0
+  position relative
+
+.services-header
+  position absolute
+  top -40px
+  right 0
+  width 65%
+  padding-left 20px
+  height 80px
+  background-color color_offical_violet
+  box-shadow 0 5px 4px 0 rgba(0,0,0,0.5)
+  h2, h4
+    margin 0
+    text-transform uppercase
+  h2
+    color color_white
+    font-size 35px
+  h4
+    color rgba(255, 255, 255, 0.48)
+    font-size 13px
+    margin-top 16px
+
+.services-content
+  width 80%
+  height auto
+  margin 0 auto
+  &--box
+    position relative
+    margin-bottom 50px
+    .services-background
+      background-size cover
+      display block
+      height 400px
+    .services-description
+      position absolute
+      top -20px
+      left 50%
+      transform translate(-50%, 0)
+      width 75%
+      padding 20px 20px
+      height auto
+      background-color rgba(250,250,250,0.85)
+      box-shadow 0 0 10px 0 rgba(0,0,0,0.35)
+      &--image
+        display none
+      &--text
+        h2
+          margin 0 0 5px 0
+          text-transform uppercase
+          font-family 'Baloo Da', cursive
+          line-height 24px
+          color #113a5d
+        hr
+          margin 0 0 15px 0
+          width 30px
+          background-color  color_offical_violet
+          border 1.5px solid color_offical_violet
+          border-radius 3px
+        ul
+          padding 0
+          margin 0 0 12px 0
+          li
+            list-style none
+            margin 5px 0
+            display -webkit-flex
+            display -moz-flex
+            display -ms-flex
+            display -o-flex
+            display flex
+            justify-content center
+            font-size 14px
+            font-family 'Do Hyeon', sans-serif
+            span
+              &:nth-child(1)
+                width 10%
+              &:nth-child(2)
+                width 80%
+        a
+          font-size 13px
+          text-transform uppercase
+          text-decoration none        
+          font-weight 600
+          color color_official_red
+          display none
+    &:nth-child(2)
+      .services-background
+        height 350px           
+    &:nth-child(3)    
+      .services-background
+        height 290px
+    &:nth-child(4)    
+      .services-background
+        height 420px
+
+.services-background--ic
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                    rgba(206, 207, 211, 0.75) 100%),
+                    url('../img/service/ingenieria-civil.jpg') 
+
+.services-background--mi
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                    rgba(206, 207, 211, 0.75) 100%),
+                    url('../img/service/ingenieria-montaje-idustrial.jpeg')                                    
+
+.services-background--ie
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                    rgba(206, 207, 211, 0.75) 100%),
+                    url('../img/service/ingenieria-electrica.jpeg')
+
+.services-background--im
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                    rgba(206, 207, 211, 0.75) 100%),
+                    url('../img/service/ingenieria-mecanica.jpg')
+
+.services-background--at
+  background-image linear-gradient(-180deg, rgba(206, 207, 211, 0.75) 2%, 
+                    rgba(206, 207, 211, 0.75) 100%),
+                    url('../img/service/aislamiento-termico.jpeg')
+
+.news
+  width 100%
+  height auto
+  padding 80px 0 80px 0
+  position relative
+  background-color #F5F5F5
+
+.news-header
+  position absolute
+  top -40px
+  left 0
+  width 65%
+  padding-left 20px
+  height 80px
+  background-color color_offical_violet
+  box-shadow 0 5px 4px 0 rgba(0,0,0,0.5)
+  h2, h4
+    margin 0
+    text-transform uppercase
+  h2
+    color color_white
+    font-size 35px
+  h4
+    color rgba(255, 255, 255, 0.48)
+    font-size 13px
+    margin-top 16px  
+
+.news-content
+  width 80%
+  margin 0 auto
+  &--outdated
+    width 100%
+    height auto
+    .outdated-image
+      width 300px
+      height auto
+      a
+        text-decoration none
+        display block
+        width 100%
+        height 100%
+        img
+          margin 0 auto
+          object-fit cover 
+          width 300px
+          height auto
+    .outdated-text
+      h2
+        text-transform uppercase
+        color #1E1D1D
+      p
+        font-size 14px
+        color #1E1E1E
+    .outdated-link
+      width 180px
+      height 40px
+      line-height 42px
+      margin 20px 0 0 0
+      text-align center
+      background-color #6F7BE8
+      border-radius 7px
+      box-shadow 0 5px 6px 0 rgba(0,0,0,0.5)
+      a
+        text-decoration none
+        display block
+        width 100%
+        height 100%
+        text-transform uppercase
+        color color_white
+        font-size 14px
+        font-weight 500
+
+.news-content--articles
+  margin-top 40px 
+  border-top 1.5px solid rgba(66,66,66,0.25)
+  padding-top 40px
+  .article
+    margin-bottom 30px
+    &-image
+      width 300px
+      height auto
+      a
+        text-decoration none
+        display block
+        width 100%
+        height 100%
+        img
+          margin 0 auto
+          object-fit cover 
+          width 300px
+          height auto
+    &-text
+      h2
+        text-transform uppercase
+        color #1E1D1D
+        margin-bottom 11px
+      a
+        text-decoration none
+        color #6F7BE8
+        font-weight 500
+        text-transform uppercase
+        font-size 14px
+        span
+          margin-top 3px
+
+.clients
+  width 100%
+  height auto
+  padding 100px 0 150px 0
+  position relative
+  &-header
+    position absolute
+    top -40px
+    right 0
+    width 65%
+    padding-left 20px
+    height 80px
+    background-color color_official_red
+    box-shadow 0 5px 4px 0 rgba(0,0,0,0.5)
+    h2, h4
+      margin 0
+      text-transform uppercase
+    h2
+      color color_white
+      font-size 35px
+    h4
+      color rgba(255, 255, 255, 0.48)
+      font-size 13px
+      margin-top 16px
+
+.clients-content
+  width 80%
+  margin 0 auto
+
+.slider-clients
+  .slider-img
+    width 250px
+    height 160px
+    margin 0 8px
+    border-radius 4px
+    overflow hidden
+    img
+      margin 0 auto
+      object-fit cover 
+      width 250px
+      height auto  
+  .slider-thumb
+    background-color rgba(0,0,0,0.15) 
+    font-size 12px
+    width 7px
+    height 7px
+    border-radius 50%
+    transition all 0.2s ease-in-out
+    &:hover
+      background-color rgba(0,0,0,0.35) 
+
+.slick-dots
+  bottom -110px 
+
+.contact
+  width 100%
+  height 800px
+  background-size cover
+  background-position  center
+  background-image linear-gradient(-180deg, rgba(0,0,0,0.30) 2%, 
+                   rgba(0,0,0,0.30) 65%),
+                   url('../img/Localizacion-Sicmeci.png')
+  position relative
+  &-content
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    width 73%
+    padding 0 20px 40px 20px
+    height auto
+    background-color #fff 
+    border-radius 4px
+    box-shadow 0 7px 4px 0 rgba(0,0,0,0.3)  
+    h2
+      font-family 'Catamaran', sans-serif
+      font-weight 700
+      margin-bottom 0
+
+.contact-form
+  width 100%
+  input, textarea
+    width 93%
+    padding 10px
+    border none
+    background-color #F0F0F0
+    margin 8px 0
+    border-radius 3px
+    &:focus
+      outline none
+      border none
+      box-shadow 0 3px 1px 0 rgba(0,0,0,0.12)
+  textarea
+    font-family 'Roboto', sans-serif
+    resize none
+  input[type='submit']
+    background-color #2D38DC
+    width 80px
+    height 35px
+    color color_white
+    font-size 12px
+
+.contact-information
+  width 100%
+  height auto
+  border-top 1px solid rgba(76,76,76,0.22)
+  padding-top 20px
+  margin-top 20px    
+  &--box
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    align-items flex-start
+    margin 5px 0
+    span      
+      &:nth-child(1)
+        width 10%
+        color color_official_blue
+      &:nth-child(2)
+        width 90%
+        font-size 13px 
+        line-height 19px
+    &:nth-child(4)
+      justify-content flex-end
+      height 20px
+      margin-top 10px
+      a
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        justify-content center
+        align-items flex-start
+        width 35%
+        text-decoration none
+        padding-bottom 4px
+        color #2D38DC
+        border-bottom 1px solid #2D38DC
+        span
+          &:nth-child(1)
+            width 20%
+          &:nth-child(2)
+            width 80%
+
+footer 
+  width 100%
+  height auto
+  padding 50px 0
+  background-color #F0F1FF
+  .footer-content
+    width 80%
+    height auto
+    margin 0 auto
+    text-align center
+
+.footer-content--menu
+  .footer-menu--logo
+    img
+      width 200px
+      height 53px
+  .footer-menu--options
+    margin-top 30px
+    position relative
+    ul
+      padding 0
+      margin 0
+      li
+        list-style none
+        font-family 'Catamaran', sans-serif
+        text-transform uppercase
+        font-weight 600
+        a
+          text-decoration none  
+          color #000000
+          transition all 0.3s ease-in-out
+          &:hover
+            color color_official_blue
+    .footer-submenu
+      display none
+      width 80%
+      height auto
+      margin 10px auto
+      background-color rgba(250,250,250,0.6)
+      padding 10px 0
+      position relative
+      box-shadow 0 0 20px 1px rgba(0,0,0,0.25)
+      ul
+        li
+          list-style none
+          margin 5px 0
+          a
+            text-decoration none
+            color #263238
+            text-transform capitalize
+            &:hover
+              color color_offical_violet
+      hr
+        position absolute
+        top -3.5px
+        left 50%
+        margin 0 0 0 -20px
+        width 40px
+        height 7px
+        border none
+        border-radius 3px
+        background-color color_offical_violet        
+
+
+.footer-content--information
+  margin-top 30px
+  p
+    font-size 12px
+    font-weight 500 
+    margin 3px 0
+    a
+      text-decoration none
+      color #5DAE23                  
+
+.container-news
+  width 100%
+  height auto
+  padding 100px 0
+  &--content
+    width 80%
+    height auto
+    margin 0 auto
+
+.news-single
+  &--image
+    div
+      a
+        text-decoration none
+        img
+          margin 0 auto
+          object-fit cover 
+          width 100%
+          height auto
+  &--text
+    h1
+      text-transform uppercase
+      font-size 22px
+      margin-bottom 4px
+    span
+      color color_offical_violet
+      font-weight 500  
+      font-size 12px
+    p
+      font-size 14px
+      color #1E1E1E              
+
+
+@media(orientation:landscape)
+  .header-content
+    .header-logo
+      width 50%
+      text-align justify
+      img 
+        width 180px
+        height 43px
+        margin-top 12.5px
+        margin-left 25px
+    .header-menu-burger
+      width 50%
+
+  .menu-options
+    top 95%
+    ul
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content center
+      flex-wrap wrap
+      li
+        width 33%
+
+  .overlay-submenu
+    top 60%
+
+  .quality-header
+    width 60%
+
+  .quality-tabs
+    width 60%
+    margin-left 10%
+
+  .quality-content
+    &--logo
+      .content-logo--box
+        width 70%
+        margin-left auto
+        margin-right auto
+
+  .news-content
+    &--outdated
+      width 300px
+      margin-left auto
+      margin-right auto
+
+  .news-content--articles
+    .article
+      width 300px
+      margin-left auto
+      margin-right auto 
+
+  .slider-clients
+    .slider-img
+      width 200px
+      height 160px
+
+  .footer-content--menu
+    .footer-menu--options
+      .footer-submenu
+        width 70%    
+
+@media (min-width 768px)
+  .header-content
+    height 90px
+    .header-logo
+      width 40%
+      text-align justify
+      margin-left 10px
+      img 
+        width 200px
+        height 53px
+        margin-top 18.5px        
+    .header-menu-burger
+      width 60%
+      margin-right 40px
+
+  .icon-menu--content
+    margin 36px 40px 0 auto
+
+  .menu-options  
+    ul
+      li
+        height 50px
+        line-height 50px
+        a
+          font-size 30px
+         
+
+  .slider-leyend
+    width 60%
+    h1
+      font-size 50px
+      line-height 60px
+
+  .we-header
+    top -60px
+    width 460px
+    height 120px
+    &--box
+      line-height 40px
+      padding 15px 0
+
+  .we-header--box
+    .we-header--icon
+      width 45px
+      height 45px
+      line-height 52px
+      margin-top 13px
+      .hydrated
+        font-size 22px
+    .we-header--text
+      h3
+        font-size 16px
+
+  .we-header--active
+    padding-bottom 30px
+
+  .we-text
+    padding-top 120px
+    &--content
+      h2
+        font-size 27px
+      #mission-text, #vission-text, #strategy-text
+        &::before
+          top 50%
+          left 10%
+          font-size 60px
+      p
+        font-size 18px
+
+  .quality-header
+    top -60px
+    left 5%
+    width 430px
+    height 120px
+    h2
+      font-size 40px
+    h4
+      font-size 18px
+      margin-top 28.5px  
+
+  .quality-tabs
+    width 50%
+    margin-left 10%
+    div
+      width 28%
+      height 38px
+      line-height 38px
+      font-size 15px
+
+  .quality-content
+    &--description
+      h1
+        font-size 27px
+      p
+        font-size 18px
+      .button-quality
+        height 45px
+        line-height 47px
+        a
+          font-size 15px
+    &--logo
+      margin 60px 0 0 0
+      width 70%
+      margin-left 30%
+      .content-logo--box
+        img
+          height 65px
+          &:nth-child(1)
+            height 57px
+          &:nth-child(2)
+            margin-top -5px 
+
+  .quality-content--body 
+    ul 
+      li 
+        span
+          &:nth-child(1)
+            width 5%
+          &:nth-child(2)
+            width 95%  
+
+  .services
+    padding 120px 0 100px 0
+
+  .services-header
+    top -60px
+    right 5%
+    width 250px
+    height 120px
+    h2
+      font-size 40px
+    h4
+      font-size 18px
+      margin-top 28.5px           
+
+  .services-content
+    width 500px
+    &--box
+      margin-bottom 70px
+      .services-background
+        height 500px
+      .services-description
+        top -25px
+        width 70%
+        &--text
+          h2
+            font-size 27px
+          hr
+            border 3px solid color_offical_violet
+          ul
+            margin 0 0 16px 0
+            li
+              margin 7px 0
+              font-size 18px
+              span
+                &:nth-child(1)
+                  color color_offical_violet
+          a
+            font-size 15px
+      &:nth-child(2)
+        .services-background
+          height 440px           
+      &:nth-child(3)    
+        .services-background
+          height 320px
+      &:nth-child(4)    
+        .services-background
+          height 460px
+
+  .news
+    padding 120px 0 100px 0     
+
+  .news-header
+    top -60px
+    left 5%
+    width 250px
+    height 120px
+    h2, h4
+      margin 0
+      text-transform uppercase
+    h2
+      font-size 40px
+    h4
+      font-size 18px
+      margin-top 28.5px   
+
+  .news-content
+    &--outdated
+      width 300px
+      margin-left auto
+      margin-right auto
+      .outdated-text
+        h2
+          font-size 27px
+        p
+          font-size 18px
+      .outdated-link
+        a
+          font-size 15px
+
+
+  .news-content--articles
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    .article
+      width 300px
+      margin-left 0
+      margin-right 0
+
+  .container-news
+    padding 140px 0 100px 0
+    &--content
+      width 75%
+  
+  .news-single--text 
+    h1
+      font-size 27px
+    span
+      font-size 14px
+    p
+      font-size 16px
+      &:nth-child(3)
+        margin-top 20px   
+
+
+  .clients
+      padding 120px 0 160px      
+      &-header
+        top -60px
+        right 5%
+        width 250px
+        height 120px
+        h2
+          font-size 40px
+        h4
+          font-size 18px
+          margin-top 28.5px 
+
+  .contact
+    &-content
+      width 400px
+      h2
+        font-size 27px
+
+  .contact-form
+    margin 0 auto
+    input, textarea
+      width 93%
+      padding 10px
+    textarea
+      font-family 'Roboto', sans-serif
+      font-size 16px 
+    input[type='text'], input[type='email'], input[type='tel']
+      height 25px  
+      font-size 16px  
+    input[type='submit']
+      width 100px
+      height 40px
+      font-size 13px
+
+  .footer-content
+    width 730px               
+  
+  .footer-content--menu
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    align-items center
+    width 100%
+    margin 0 auto
+    .footer-menu--logo
+      width 30%
+      margin-right 50px
+    .footer-menu--options
+      width 60%
+      margin-top 0px
+      ul
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        justify-content flex-start
+        align-items center
+        flex-wrap wrap
+        li
+          font-size 18px
+          width 33%
+    
+
+@media (min-width 1024px)
+  .icon-menu--content
+    display none
+
+  .overlay-menu
+    display block
+    position absolute
+    top 22.25px
+    left inherit
+    right 20px
+    width 550px
+    height 40px
+    z-index 10
+    background-color transparent
+
+  .menu-options
+    top 0  
+    margin-top 0
+    height 40px
+    ul
+      flex-wrap nowrap
+      li
+        width 91px
+        margin 0 2px
+        height 40px
+        line-height 40px
+        a
+          font-size 15px
+          color color_offical_violet
+          transition all 0.13s ease-in-out
+        &:hover
+          background-color color_offical_violet
+          border-radius 3px
+          a
+            color color_white
+            font-size 13px
+          
+  .slider-leyend
+    width 70%
+    h1
+      font-size 45px          
+
+  .we-text
+    padding-top 120px
+    max-width 1100px
+    &--content
+      h2
+        font-size 30px
+      #mission-text, #vission-text, #strategy-text
+        &::before
+          left 5%
+          font-size 63px
+
+  .overlay-quality--content
+    width 750px
+    max-width 900px
+
+  .quality-content--header 
+    .logo 
+      img
+        width 200px
+        height 50px
+
+  .quality-tabs
+    position absolute
+    top 20px
+    right 0
+    width 50%
+    margin-left 0
+    width 450px
+    div
+      width 28%
+      height 40px
+      line-height 40px
+      font-size 15px
+
+  .quality-content--body 
+    h2
+      font-size 30px
+      font-weight 700
+    p
+      font-size 17px
+    ul
+      li
+        font-size 17px
+        margin-bottom 10px
+        span
+          &:nth-child(1)
+            width 5%
+            font-size 17px
+          &:nth-child(2)
+            width 95% 
+
+  .services-content--box
+    width 900px
+    height 500px
+    left 50%
+    transform translate(-50%,0)
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    .service-bar
+      width 20%
+      background-color color_offical_violet
+    .services-background
+      width 80%
+      height 500px  
+    .services-description
+      width 75%
+      height 330px
+      top 50%
+      left 10%
+      transform translate(0,-50%)
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      background-color transparent
+      box-shadow none 
+      padding 0 20px
+      &--image
+        display block
+        width 50%
+        margin 0 auto
+        img
+          object-fit cover 
+          width 100%
+          height 100%
+      &--text
+        width 50%
+        h2
+          font-size 23px
+          margin-left 18px
+        hr
+          margin 0 0 15px 18px
+        ul
+          li
+            font-size 14px
+        a
+          font-size 14px
+          margin-left 18px
+
+  .services-content--box
+    &:nth-child(2), &:nth-child(3), &:nth-child(4) 
+      .services-background
+        height 500px
+    &:nth-child(2), &:nth-child(4)
+      .service-bar
+        order 2
+      .services-background
+        order 1
+      .services-description
+        &--image
+          order 2
+        &--text  
+          order 1        
+
+  .services-background--ic
+    background-image linear-gradient(-180deg,rgba(206,207,211,0.88) 2%,
+                      rgba(206,207,211,0.88) 100%),
+                      url("../img/service/ingenieria-civil.jpg")
+
+  .services-background--mi
+    background-image linear-gradient(-180deg, rgba(206,207,211,0.88) 2%, 
+                      rgba(206,207,211,0.88) 100%),
+                      url('../img/service/ingenieria-montaje-idustrial.jpeg')                                    
+
+  .services-background--ie
+    background-image linear-gradient(-180deg, rgba(206,207,211,0.88) 2%, 
+                      rgba(206,207,211,0.88) 100%),
+                      url('../img/service/ingenieria-electrica.jpeg')
+
+  .services-background--im
+    background-image linear-gradient(-180deg, rgba(206,207,211,0.88) 2%, 
+                    rgba(206,207,211,0.88) 100%),
+                    url('../img/service/ingenieria-mecanica.jpg')  
+
+  .news-content
+    width 900px
+    max-width 1000px
+
+  .news-content--outdated
+    width 100%
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex 
+    justify-content center
+    align-items center
+    .outdated-image
+      width 35%
+      margin-right 30px
+      a
+        img
+          width 100%
+    .outdated-text
+      width 60%
+      h2
+        font-size 24px
+        margin-top 0
+      p
+        font-size 16px
+    .outdated-link
+      width 150px
+      height 34px
+      line-height 36px
+      a
+        font-size 12px  
+
+  .news-content--articles 
+    width 100%
+    .article
+      width 280px
+      &-image
+        width 280px
+        a
+          img
+            width 280px
+      &-text
+        h2
+          font-size 22px
+        a
+          font-size 12px 
+
+  .container-news--content
+    width 900px
+
+  .news-single
+    display -webkit-flex
+    display -moz-flex
+    display -ms-flex
+    display -o-flex
+    display flex
+    justify-content center
+    &--image
+      div
+        width 270px
+        margin-right 30px
+    &--text
+      width 590px
+      h1
+        margin-top 0
+      p
+        font-size 16px      
+
+
+  .contact-content
+    left 8%
+    transform translate(0%, -50%)
+
+  .contact-information--box
+    &:nth-child(4) 
+      a
+        width 95px
+        text-align center
+
+  footer 
+    padding 40px 0
+    .footer-content
+      width 900px
+
+  .footer-content--menu 
+    .footer-menu--options 
+      ul 
+        li
+          width 16.6%
+          font-size 15px 
+
+@media (min-width 1200px)
+  .slider-main
+    background-attachment fixed
+
+  .slider-leyend
+    h1
+      font-size 50px
+
+  .quality-tabs
+    right 10%
+
+  .quality-content--logo 
+    .content-logo--box
+      width 400px
+      margin-right 20px
+
+  .services-content
+    &--box
+      width 1000px
+      max-width 1200px
+      .services-description
+        &--text
+          h2
+            font-size 35px
+            line-height 35px
+          ul
+            li
+              font-size 18px
+              line-height 18px  
+  
+  .we-text, .quality-content, .clients-content, .news-content
+    width 1000px
+    max-width 1200px
+
+  .container-news
+    padding 170px 0 100px 0  
+
+  .contact-content 
+    h2
+      margin-bottom 0px  
+
+@media (min-width 1400px)
+  .header-content
+    .header-logo
+      margin-left 10%
+
+  .overlay-menu
+    right 10%    
+
+  .slider-leyend
+    width 650px
+    h1
+      font-size 50px
+
+  .quality-tabs
+    right 20%
+
+  .we, .quality
+    height 420px      
+
+  .quality-content
+    margin-top 30px  

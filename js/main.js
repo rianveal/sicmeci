@@ -36,15 +36,32 @@ $(document).ready( function() {
 
   // Evento para el item del menu que cuenta con sub menu --> Servicios
   $('.item-special').on('click', function(){
+    var el = $(this)
     if( width < 1024 ){
       if($('.overlay-submenu').is(':hidden')){
         $('.overlay-submenu').fadeIn('slow')
         $('.menu-options').css({'filter':'blur(4px)','-webkit-filter':'blur(4px)'})
       }
-    }else{
-
+    }else if( width > 1024 ){
+      if($('.overlay-submenu').is(':hidden')){
+        $('.overlay-submenu').fadeIn('slow')
+        //$('.menu-options').css({'filter':'blur(4px)','-webkit-filter':'blur(4px)'})
+      }else{
+        $('.overlay-submenu').fadeOut('slow')
+      }
     }
   })
+
+  $('.item-menu').hover(function(){
+    if( width > 1024 ){
+      if($('.overlay-submenu').is(':hidden')){
+      }else{
+        $('.overlay-submenu').fadeOut('slow')
+      }
+    }
+  })
+
+
   
   // Evento del botón atras del submenu
   $('.back').on('click', function(){
@@ -55,16 +72,21 @@ $(document).ready( function() {
 
   // Evento de los item del submenu
   $('.item-submenu').on('click', function(){
-    if ( $('.icon-menu--content').is('hidden')){
-    }else{
-      if ( $(iconMenu).hasClass('icon-menu--active') ){
-        $(iconMenu).removeClass('icon-menu--active')
-        $(overlay).removeClass('active-overlay')
-        $('body').css('overflow-y','visible')
-        $('.overlay-submenu').fadeOut()
-        $('.menu-options').css('filter','blur(0px)')
+    if( width < 1024 ){
+      if ( $('.icon-menu--content').is('hidden')){
+      }else{
+        if ( $(iconMenu).hasClass('icon-menu--active') ){
+          $(iconMenu).removeClass('icon-menu--active')
+          $(overlay).removeClass('active-overlay')
+          $('body').css('overflow-y','visible')
+          $('.overlay-submenu').fadeOut()
+          $('.menu-options').css('filter','blur(0px)')
+        }
       }
+    }else{
+      $('.overlay-submenu').fadeOut('slow')
     }
+    
   })
 
   // Evento para desplegar el submenu de servicios del footer
@@ -90,7 +112,7 @@ $(document).ready( function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
     arrows: 'false',
   })
 

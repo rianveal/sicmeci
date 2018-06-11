@@ -172,7 +172,7 @@ body
         padding-left 20px
         font-family 'Do Hyeon', sans-serif
         h3
-          color color_offical_violet
+          color color_official_blue
           text-transform uppercase
           margin 0
           line-height 55px  
@@ -184,12 +184,26 @@ body
         li
           list-style none
           margin 7px 0
+          display -webkit-flex
+          display -moz-flex
+          display -ms-flex
+          display -o-flex
+          display flex         
+          .icon
+            width 9%
+            transition all .2s ease-in-out
+            svg 
+              width 18px
           a
             text-decoration none
             color #263238
-            font-size 18px
-            &:hover
-              color color_offical_violet
+            font-size 16px
+            text-transform uppercase
+            transition all .2s ease-in-out
+          &:hover
+            .icon, a
+              transform scale(1.01)
+              color color_offical_violet  
   
 .slider-main
   position relative
@@ -203,7 +217,8 @@ body
   position absolute
   width 100%
   height 100%
-  background linear-gradient(-180deg, rgba(22,35,217,0.10) 2%, rgba(167,76,74,0.50) 65%, rgba(221,45,42,0.50) 100%)
+  // background linear-gradient(-180deg, rgba(22,35,217,0.10) 2%, rgba(167,76,74,0.50) 65%, rgba(221,45,42,0.50) 100%)
+  background linear-gradient(to right top, rgba(73,82,162,0.4), rgba(135,70,159,0.4), rgba(185,48,138,0.4), rgba(218, 28, 101,0.4), rgba(231, 49, 54,0.3))
   z-index 2
 
 .slider-leyend
@@ -216,12 +231,14 @@ body
   z-index 3
   text-align center
   h1
-    font-size 28px
-    line-height 32px
+    font-size 26px
+    line-height 34px
     color color_white
+    //background-image linear-gradient(to right, #1e30ba, #8d00a5, #c10085, #df0061, #eb123c)
     text-transform uppercase
-    font-family 'Baloo Da', cursive
-    text-shadow 0 0 2px color_offical_violet
+    letter-spacing 2.3px
+    font-family 'Jockey One', sans-serif
+    //text-shadow 0 0 2px color_white
     
 
 .slider-oc
@@ -969,35 +986,35 @@ footer
           transition all 0.3s ease-in-out
           &:hover
             color color_official_blue
-    .footer-submenu
-      display none
-      width 80%
-      height auto
-      margin 10px auto
-      background-color rgba(250,250,250,0.6)
-      padding 10px 0
-      position relative
-      box-shadow 0 0 20px 1px rgba(0,0,0,0.25)
-      ul
-        li
-          list-style none
-          margin 5px 0
-          a
-            text-decoration none
-            color #263238
-            text-transform capitalize
-            &:hover
-              color color_offical_violet
-      hr
-        position absolute
-        top -3.5px
-        left 50%
-        margin 0 0 0 -20px
-        width 40px
-        height 7px
-        border none
-        border-radius 3px
-        background-color color_offical_violet        
+
+.footer-submenu
+    display none
+    width 80%
+    height auto
+    margin 10px auto
+    background-color rgba(250,250,250,0.6)
+    padding 10px 0
+    position relative
+    box-shadow 0 0 20px 1px rgba(0,0,0,0.25)
+    ul.footer-submenu--list
+      li
+        list-style none
+        margin 5px 0
+        a
+          text-decoration none
+          color #263238
+          &:hover
+            color color_offical_violet
+    hr
+      position absolute
+      top -3.5px
+      left 50%
+      margin 0 0 0 -20px
+      width 40px
+      height 7px
+      border none
+      border-radius 3px
+      background-color color_offical_violet 
 
 
 .footer-content--information
@@ -1133,7 +1150,30 @@ footer
         line-height 50px
         a
           font-size 30px
-         
+
+  .overlay-submenu
+    width 500px
+    &--header
+      height 65px
+      .back
+        width 45px
+        height 45px
+        line-height 50px
+        margin 10px 0 0 0
+      .title
+        h3
+          font-size 28px
+          line-height 65px
+    &--body
+      ul
+        li
+          align-items end
+          .icon
+            width 6%
+            svg 
+              width 21px
+          a
+            font-size 20px      
 
   .slider-leyend
     width 60%
@@ -1404,6 +1444,16 @@ footer
         li
           font-size 18px
           width 33%
+  
+  .footer-submenu
+    ul.footer-submenu--list
+      justify-content flex-end
+      li
+        width 100%
+    hr
+      top -4.5px
+      left inherit
+      right 2px
     
 
 @media (min-width 1024px)
@@ -1442,6 +1492,36 @@ footer
           a
             color color_white
             font-size 13px
+
+  .overlay-submenu
+    width 550px
+    left inherit
+    top 64px
+    transform inherit
+    background-color transparent
+    box-shadow none
+    border none
+    &--header
+      display none
+    &--body
+      width 100%
+      ul
+        width 280px
+        background-color rgba(250,250,250,0.93)
+        margin 0 0 0 91px
+        padding 10px
+        li
+          align-items center
+          margin 10px 0
+          .icon
+            width 10%
+            margin-top -6px
+            svg 
+              width
+                14px
+          a
+            font-size 14px  
+         
           
   .slider-leyend
     width 70%
@@ -1677,8 +1757,38 @@ footer
         li
           width 16.6%
           font-size 15px 
+      .footer-submenu
+        width 430px    
+
+  .footer-submenu
+    position absolute
+    top 64%
+    background-color rgba(250,250,250,0.95)
+    padding 10px
+    ul.footer-submenu--list
+      flex-wrap wrap
+      justify-content flex-start
+      li
+        width 50% 
+        margin 1px 0 
+        text-align justify 
+    hr
+      left 50%
+      right inherit      
 
 @media (min-width 1200px)
+  .header-content 
+    .header-logo 
+      img
+        width 225px
+        height 60px
+        margin-top 15px
+
+  .overlay-submenu
+    &--body
+      ul
+        width 255px
+
   .slider-main
     background-attachment fixed
 
@@ -1728,7 +1838,7 @@ footer
     right 10%    
 
   .slider-leyend
-    width 650px
+    width 750px
     h1
       font-size 50px
 
